@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://bootswatch.com/5/quartz/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.1"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@1.0.0"> </script>
+  </head>
+  <body>
+    <div id="app" class="container" style="padding-top: 80px;">
+      <form 
+        id="form" 
+        class="form-control card mx-auto" 
+        style="width: 600px; min-height: 250px;"
+      >
+        <p>Elija una imagen</p>
+        <input class="form-control" type="file" name="inputImage" id="inputImage"/>
+        <br class="my-2">
+        <img id="preview" class="mx-auto"/>
+        <br class="my-2">
+        <button class="btn btn-primary mx-auto" id="examinar" type="submit">Examinar...</button>
+      </form>
+      <div
+        id="loadDiv"
+        class="form-control card mx-auto ocult"
+        style="width: 600px; min-height: 250px;">
+        <h4 id="message">Entrenando modelo...</h4>
+        <div class="mx-auto spinner my-auto"></div>
+      </div>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
